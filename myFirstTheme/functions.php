@@ -24,6 +24,12 @@
 
 // add_action('admin_init','firsttheme_admin_scripts');
 
+function tabs_enqueue() {
+    if(is_page( 205 )) {
+        wp_enqueue_script( 'ui', get_template_directory_uri() . '/js/ui/jquery-ui.min.js', [], '1.8', true);
+    }
+}
+
 //----------------------------------------------------------------
 //                       utilitaires
 //----------------------------------------------------------------
@@ -40,8 +46,11 @@ function firsttheme_setup() {
 
     //support de titre
     add_theme_support('title-tag');
+
+    add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat']);
     
     register_nav_menu('header', 'entête de page');
+    register_nav_menu('footer', 'Pied de page');
 }
 
 add_action('after_setup_theme','firsttheme_setup');

@@ -1,22 +1,52 @@
+<?php get_header(); ?>
+
+<div id="primary" class="content-area">
+<main id="main" class="site-main" role="main">
+
+<section class="error-404 not-found">
+<header class="page-header">
+
+<!-- Personnaliser le titre ici -->
+<h1 class="page-title">Erreur 404 : Page Non Trouvée</h1>
+</header>
+
+<div class="page-content">
+
+<!-- Placer ici le lien vers votre image d'erreur 404 personnalisée -->
+<!-- <p align="center"><img src="./assets/images/404.jpg" alt="Erreur 404" /></p> -->
+
+<!-- Personnaliser le message comme vous le souhaitez -->
+<p>Nous sommes désolé mais la page que vous cherchez n'est pas ou plus 
+disponible. Nous vous suggérons de vous rendre sur <a href="Accueil">la page 
+d'accueil</a> du site ou d'effectuer une nouvelle recherche :</p>
+
+<?php get_search_form(); ?>
+
+<!-- Afficher les derniers articles du blog -->
+ <p>Découvrez nos derniers articles :</p>
+
+<ul>
 <?php
-get_header();
+$my_query = new WP_Query('showposts=5');
+while ($my_query->have_posts()) : $my_query->the_post();
 ?>
-<section class="section-404">
-		<div class="nt-container">
-			<div class="nt-columns-area">
-				<div class="nt-column-6 mx-auto">
-					<div class="card-404">
-						<h1><?php esc_html_e('4'); ?><span><?php esc_html_e('0'); ?></span><?php esc_html_e('4'); ?></h1> 
-						
-						<h6 class="not-found"><?php esc_html_e('Oops! Page Not Found...'); ?></h6>
-													
-						<p><?php esc_html_e('Oops! The page you are looking for does not exist.');?> </p>
-					
-						<a href="<?php echo esc_url(home_url( '/' ) ); ?>" class="main-btn"><?php esc_html_e('Back To Home'); ?><i class="fa fa-home"></i></a>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+<?php
+endwhile;
+?>
+</ul>
+
+<!-- Ajouter des liens vers vos pages importantes -->
+<!-- <p>Vous pouvez aussi consulter :</p>
+
+<ul>
+<li><a href="/">Page importante #1</a></li>
+<li><a href="/">Page importante #2</a></li>
+<li><a href="/">Page importante #3</a></li>
+</ul>  -->
+
+
+
 <?php get_footer(); ?>
+
+

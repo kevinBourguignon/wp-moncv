@@ -2,7 +2,7 @@
 Theme Name: My First Theme
 */
 
-body {
+body, html {
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@ body {
     position: sticky;
     top: 0;
     left: 0;
-    background: blue;
+    background: rgba(36, 32, 32, 0.795);
     list-style: none;
     z-index: 100;
     padding: 0 0 0;
@@ -42,7 +42,7 @@ body {
     display: none;
     top: 75px;
     width: max-content;
-    background-color: blue;
+    background-color: rgba(36, 32, 32, 0.795);
 }
 
 .nav-menu li a:hover {
@@ -79,117 +79,148 @@ body {
 }
 
 /* ============================================================================
-====================        Contact
+====================        A PROPOS
 =============================================================================== */
 
-.page-id-13 {
-    background-color: #444442;
+.wp-title {
+    margin: 0;
+    padding: 40px;
+    font-size: 2rem;
+    color: black;
 }
 
-/* .contenu-forms {
-    border: 2px solid blue;
-} */
+.wp-texte {
+    margin: 0;
+    font-size: 1.2rem;
+    color: black;
 
-h1, p {
-    font-family: 'Poppins', sans-serif, 'arial';
-    font-weight: bolder;
-    color: white;
+}
+
+/* ============================================================================
+====================        Contact
+=============================================================================== */
+.contenu-forms {
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.contact {
+   
+    border: 2px solid black;
+    margin: 0;
+    padding: 50px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+div p {
+    margin: 15px;
+}
+
+.titre {
     text-align: center;
-} 
-
-form input, form textarea {
-    color: #999;
-    top: 1.5px;
-    -webkit-transition: all 0.225s ease;
-    transition: all 0.225s ease;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
 }
 
-input {
-    float: left;
-    width: 295px;
-    margin: 1rem 0;
-    position: relative;
-    border-radius: 4px;
-}
-
-@media only screen and (max-width: 768px){
-    .styled-input {
-        width:100%;
-    }
-}
-
-input label {
-    color: #999;
-    padding: 1.3rem 30px 1rem 30px;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-    pointer-events: none;
-}
-
-textarea {
-    width: 650px;
-    max-width: 100%;
-}
-
-input,
-textarea {
-    padding: 30px;
-    border: 0;
-    width: 100%;
-    font-size: 1rem;
-    background-color: #2d2d2d;
-    color: white;
-    border-radius: 4px;
-}
-
-input:focus,
-textarea:focus { outline: 0; }
-
-input:focus ~ span,
-textarea:focus ~ span {
-    width: 50%;
-    -webkit-transition: all 0.075s ease;
-    transition: all 0.075s ease;
-}
-
-textarea {
-    width: 100%;
-    min-height: 15em;
-}
-
-
-form input[type=submit] {
-    padding: 7px 35px;
-    border-radius: 60px;
-    display: inline-block;
-    background-color: #4b8cfb;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
-              0 2px 10px 0 rgba(0,0,0,0.07);
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-
-
-
-
-
-@media screen and (max-width: 600px) {
-    .forms, form, form input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    } 
-}
 
 /* ============================================================================
 ====================        Footer
 =============================================================================== */
 
-#copyright {
-    color: black;
+.grecaptcha-badge {
+	z-index: 9999 !important;
+	bottom: 60px !important;
 }
+
+#copyright {
+    color: white;
+    margin: 0;
+    background-color: rgba(36, 32, 32, 0.795);
+    padding: 55px;  
+    position: block; 
+    text-align: center;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: rgba(36, 32, 32, 0.795);
+    list-style: none;
+    padding: 0 0 0;
+    margin: 0 0 0;
+}
+
+
+.footer-menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu ul {
+    list-style: none;
+    position: absolute;
+    display: none;
+    top: 75px;
+    width: max-content;
+    background-color: rgba(36, 32, 32, 0.795);
+}
+
+.git-logo  {
+   margin: 0;
+   padding: 0;
+}
+
+/* ============================================================================
+====================        404 Page
+=============================================================================== */
+
+.site-main {
+    background-image: url(image/pexels-todd-trapani-1420440.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;  
+    margin-top: 150px;
+}
+
+.page-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-shadow: 3px 2px 3px #271937;
+}
+
+.page-content {
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    text-shadow: 10px 5px 3px #271937;
+}
+
+.page-content a:hover {
+    background-color: #e33131;
+    transition: .0.5s;
+}
+
