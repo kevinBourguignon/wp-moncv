@@ -185,6 +185,45 @@ div p {
    padding: 0;
 }
 
+.main {
+    position: static;
+    width: 300px;
+    display: block;
+    vertical-align: baseline;
+    float: right;   
+}
+
+.site__sidebar ul {
+     margin: 0;
+    padding: 0;
+}
+
+
+.widget ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+}
+
+.widget li a {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    line-height: 45px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;    
+}
+
+.widgettitle {
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+section {
+    
+
+}
+
 /* ============================================================================
 ====================        404 Page
 =============================================================================== */
